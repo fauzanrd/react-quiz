@@ -15,7 +15,6 @@ const Test2 = () => {
 
   return (
     <div>
-      {inputValue}
       <ul>
         <li>Render user input value inside the label below</li>
         <li>
