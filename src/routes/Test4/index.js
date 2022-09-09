@@ -1,19 +1,26 @@
-import Input from "./Input";
-import Table from "./Table";
+import { useState } from 'react';
+import Input from './Input';
+import Table from './Table';
+import DATA from './_data';
 
 const Test4 = () => {
-  return(
+  const [searchKeyword, setSearchKeyword] = useState('')
+
+  return (
     <div>
       <ul>
         <li>Please render data into the table</li>
-        <li>Please filter the table by name search (after press enter or click search button)</li>
+        <li>
+          Please filter the table by name search (after press enter or click
+          search button)
+        </li>
       </ul>
-      <Input />
+      <Input onKeywordChange={setSearchKeyword} />
       <div>
-        <Table />
+        <Table searchKeyword={searchKeyword} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Test4;
