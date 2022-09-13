@@ -1,5 +1,4 @@
 import { cssModal } from './style';
-import { DEFAULT_DATA } from './_data';
 
 const Modal = ({ data = {}, resetForm }) => {
   const handleReset = () => {
